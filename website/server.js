@@ -13,3 +13,6 @@ app.get('/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'public/da
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+// Keep your app.listen for local development, 
+// but Vercel needs the export to work.
+module.exports = app;
